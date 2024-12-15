@@ -9,7 +9,7 @@
 
 class TablePrinter {
 public:
-    // Исправленный метод для поддержки long long в ключах
+    // Г€Г±ГЇГ°Г ГўГ«ГҐГ­Г­Г»Г© Г¬ГҐГІГ®Г¤ Г¤Г«Гї ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ long long Гў ГЄГ«ГѕГ·Г Гµ
     void printTableVertical(
         const std::map<long long, std::map<int, double>>& results,
         const std::string& title,
@@ -24,7 +24,7 @@ public:
 
         for (auto N : N_values) {
             for (auto M : M_values) {
-                // Проверяем наличие значений перед доступом
+                // ГЏГ°Г®ГўГҐГ°ГїГҐГ¬ Г­Г Г«ГЁГ·ГЁГҐ Г§Г­Г Г·ГҐГ­ГЁГ© ГЇГҐГ°ГҐГ¤ Г¤Г®Г±ГІГіГЇГ®Г¬
                 if (results.find(N) != results.end() && results.at(N).find(M) != results.at(N).end()) {
                     long long timeNs = static_cast<long long>(results.at(N).at(M) * 1'000'000'000);
                     std::cout << std::left
