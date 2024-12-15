@@ -2,7 +2,7 @@
 #define UTILS_H
 
 #include <string>
-#include <chrono> // для std::chrono
+#include <chrono> // Г¤Г«Гї std::chrono
 
 void generateFile(const std::string& filename, int N);
 
