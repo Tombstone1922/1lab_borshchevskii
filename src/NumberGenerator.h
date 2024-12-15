@@ -5,7 +5,7 @@
 
 class NumberGenerator {
 public:
-    // Генерирует файл filename с числами от 1 до N
+    // ГѓГҐГ­ГҐГ°ГЁГ°ГіГҐГІ ГґГ Г©Г« filename Г± Г·ГЁГ±Г«Г Г¬ГЁ Г®ГІ 1 Г¤Г® N
     static void generateFile(const std::string& filename, int N);
 };
 
