@@ -4,9 +4,8 @@
 #include "IProcessor.h"
 
 class PowerProcessor : public IProcessor {
-    int power;
 public:
-    PowerProcessor(int p);
+    PowerProcessor(); // конструктор по умолчанию
     int processElement(int element) const override;
 };
 

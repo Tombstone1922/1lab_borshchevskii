@@ -128,17 +128,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="DataHandler.h" />
+    <ClInclude Include="FactorialProcessor.h" />
     <ClInclude Include="FibonacciProcessor.h" />
     <ClInclude Include="IProcessor.h" />
+    <ClInclude Include="MethodHandler.h" />
     <ClInclude Include="MultiplierProcessor.h" />
+    <ClInclude Include="NumberGenerator.h" />
     <ClInclude Include="PowerProcessor.h" />
+    <ClInclude Include="TablePrinter.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataHandler.cpp" />
+    <ClCompile Include="FactorialProcessor.cpp" />
     <ClCompile Include="FibonacciProcessor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MethodHandler.cpp" />
     <ClCompile Include="MultiplierProcessor.cpp" />
+    <ClCompile Include="NumberGenerator.cpp" />
     <ClCompile Include="PowerProcessor.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>

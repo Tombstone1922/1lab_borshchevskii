@@ -1,0 +1,12 @@
+#ifndef NUMBERGENERATOR_H
+#define NUMBERGENERATOR_H
+
+#include <string>
+
+class NumberGenerator {
+public:
+    // Генерирует файл filename с числами от 1 до N
+    static void generateFile(const std::string& filename, int N);
+};
+
+#endif

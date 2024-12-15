@@ -7,7 +7,7 @@
 void DataHandler::loadFromFile(const std::string& filename) {
     std::ifstream fin(filename);
     if (!fin.is_open()) {
-        throw std::runtime_error("Cannot open file");
+        throw std::runtime_error("Cannot open file: " + filename);
     }
     data.clear();
     int val;
@@ -20,20 +20,12 @@ void DataHandler::loadFromFile(const std::string& filename) {
 void DataHandler::saveToFile(const std::string& filename) {
     std::ofstream fout(filename);
     if (!fout.is_open()) {
-        throw std::runtime_error("Cannot open file for writing");
+        throw std::runtime_error("Cannot open file for writing: " + filename);
     }
     for (auto& d : data) {
         fout << d << "\n";
     }
     fout.close();
-}
-
-void DataHandler::setData(std::vector<int>&& newData) {
-    data = std::move(newData);
-}
-
-const std::vector<int>& DataHandler::getData() const {
-    return data;
 }
 
 void DataHandler::processSequential(const IProcessor& processor) {
@@ -45,17 +37,16 @@ void DataHandler::processSequential(const IProcessor& processor) {
 void DataHandler::processParallel(const IProcessor& processor, int threadCount) {
     if (threadCount <= 0) threadCount = 1;
     std::vector<std::thread> threads;
-    int dataSize = static_cast<int>(data.size());
-    int chunkSize = dataSize / threadCount;
-    int remainder = dataSize % threadCount;
+    size_t dataSize = data.size();
+    size_t chunkSize = dataSize / threadCount;
+    size_t remainder = dataSize % threadCount;
 
-    int start = 0;
+    size_t start = 0;
     for (int i = 0; i < threadCount; ++i) {
-        int currentChunkSize = chunkSize + (i < remainder ? 1 : 0);
-        int end = start + currentChunkSize;
-        // Захватим всё по ссылке, кроме start и end, которые передаём по значению
+        size_t currentChunkSize = chunkSize + (i < remainder ? 1 : 0);
+        size_t end = start + currentChunkSize;
         threads.emplace_back([&, start, end]() {
-            for (int idx = start; idx < end; ++idx) {
+            for (size_t idx = start; idx < end; ++idx) {
                 data[idx] = processor.processElement(data[idx]);
             }
             });
@@ -67,18 +58,19 @@ void DataHandler::processParallel(const IProcessor& processor, int threadCount) 
     }
 }
 
-void DataHandler::processParallelCustom(const IProcessor& processor, const std::vector<int>& partitionSizes) {
-    int sum = std::accumulate(partitionSizes.begin(), partitionSizes.end(), 0);
-    if (sum != (int)data.size()) {
-        throw std::runtime_error("Partition sizes do not sum up to data size");
+void DataHandler::processUneven(const IProcessor& processor, const std::vector<size_t>& splits) {
+    size_t totalSize = std::accumulate(splits.begin(), splits.end(), 0);
+    if (totalSize != data.size()) {
+        throw std::runtime_error("Split sizes do not sum up to data size");
     }
 
     std::vector<std::thread> threads;
-    int start = 0;
-    for (auto size : partitionSizes) {
-        int end = start + size;
+    size_t start = 0;
+
+    for (size_t size : splits) {
+        size_t end = start + size;
         threads.emplace_back([&, start, end]() {
-            for (int idx = start; idx < end; ++idx) {
+            for (size_t idx = start; idx < end; ++idx) {
                 data[idx] = processor.processElement(data[idx]);
             }
             });
@@ -88,4 +80,12 @@ void DataHandler::processParallelCustom(const IProcessor& processor, const std::
     for (auto& th : threads) {
         th.join();
     }
+}
+
+const std::vector<int>& DataHandler::getData() const {
+    return data;
+}
+
+void DataHandler::setData(std::vector<int>&& newData) {
+    data = std::move(newData);
 }
