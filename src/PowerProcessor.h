@@ -5,7 +5,7 @@
 
 class PowerProcessor : public IProcessor {
 public:
-    PowerProcessor(); // конструктор по умолчанию
+    PowerProcessor(); // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
     int processElement(int element) const override;
 };
 
