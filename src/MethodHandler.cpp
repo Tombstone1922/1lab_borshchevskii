@@ -114,8 +114,8 @@ void MethodHandler::runUnevenSplit(const std::vector<long long>& N_values, const
 
         for (int M : M_values) {
             std::vector<size_t> splits(M, N / M);
-            splits[0] = N / 10;  // Первый поток получает 10%
-            splits[1] = N - splits[0];  // Второй поток получает оставшееся
+            splits[0] = N / 10;  // ГЏГҐГ°ГўГ»Г© ГЇГ®ГІГ®ГЄ ГЇГ®Г«ГіГ·Г ГҐГІ 10%
+            splits[1] = N - splits[0];  // Г‚ГІГ®Г°Г®Г© ГЇГ®ГІГ®ГЄ ГЇГ®Г«ГіГ·Г ГҐГІ Г®Г±ГІГ ГўГёГҐГҐГ±Гї
 
             DataHandler handler;
             handler.loadFromFile(inputFile);
