@@ -5,8 +5,8 @@
 
 class FactorialProcessor : public IProcessor {
 public:
-    FactorialProcessor(); // Êîíñòðóêòîð
-    int processElement(int element) const override; // Ìåòîä äëÿ âû÷èñëåíèÿ ôàêòîðèàëà
+    FactorialProcessor(); 
+    int processElement(int element) const override; 
 };
 
 #endif

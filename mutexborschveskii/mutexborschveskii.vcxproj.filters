@@ -13,66 +13,78 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Processors">
+      <UniqueIdentifier>{0256d9cd-72af-470c-a4cb-b6df3eb991d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Utils">
+      <UniqueIdentifier>{35e5e157-02e6-4d7f-a881-73c4ba10dbbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Handlers">
+      <UniqueIdentifier>{0568bb76-8afd-4b1a-bd62-8fa5a8b0327a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Core">
+      <UniqueIdentifier>{a55de39d-33b8-4b27-8e15-9139cc27452f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\DataHandler.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\NumberGenerator.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\TablePrinter.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Handlers\MethodHandler.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="Processors\FactorialProcessor.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Processors\FibonacciProcessor.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Processors\IProcessor.h">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Processors</Filter>
     </ClInclude>
     <ClInclude Include="Processors\MultiplierProcessor.h">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Processors</Filter>
+    </ClInclude>
+    <ClInclude Include="Processors\FibonacciProcessor.h">
+      <Filter>Исходные файлы\Processors</Filter>
+    </ClInclude>
+    <ClInclude Include="Processors\IProcessor.h">
+      <Filter>Исходные файлы\Processors</Filter>
     </ClInclude>
     <ClInclude Include="Processors\PowerProcessor.h">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Processors</Filter>
     </ClInclude>
     <ClInclude Include="Utils\utils.h">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Handlers\MethodHandler.h">
+      <Filter>Исходные файлы\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\NumberGenerator.h">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TablePrinter.h">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DataHandler.h">
+      <Filter>Исходные файлы\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Core\DataHandler.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\NumberGenerator.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Handlers\MethodHandler.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Processors\FactorialProcessor.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Processors\FibonacciProcessor.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Processors</Filter>
     </ClCompile>
     <ClCompile Include="Processors\MultiplierProcessor.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Processors</Filter>
+    </ClCompile>
+    <ClCompile Include="Processors\FibonacciProcessor.cpp">
+      <Filter>Исходные файлы\Processors</Filter>
     </ClCompile>
     <ClCompile Include="Processors\PowerProcessor.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Processors</Filter>
     </ClCompile>
     <ClCompile Include="Utils\utils.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Handlers\MethodHandler.cpp">
+      <Filter>Исходные файлы\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\NumberGenerator.cpp">
+      <Filter>Исходные файлы\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DataHandler.cpp">
+      <Filter>Исходные файлы\Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

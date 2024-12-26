@@ -13,7 +13,7 @@ public:
     void processSequential(const IProcessor& processor);
     void processParallel(const IProcessor& processor, int threadCount);
     void processParallelCustom(const IProcessor& processor, const std::vector<int>& partitionSizes);
-    void processUneven(const IProcessor& processor, const std::vector<size_t>& splits); // Íîâûé ìåòîä
+    void processUneven(const IProcessor& processor, const std::vector<size_t>& splits); 
 
     const std::vector<int>& getData() const;
     void setData(std::vector<int>&& newData);

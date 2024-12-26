@@ -5,7 +5,7 @@
 
 class PowerProcessor : public IProcessor {
 public:
-    PowerProcessor(); // êîíñòðóêòîð ïî óìîë÷àíèþ
+    PowerProcessor();
     int processElement(int element) const override;
 };
 

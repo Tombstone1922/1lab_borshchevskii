@@ -25,11 +25,9 @@ F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\Metho
 F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\MethodHandler.cpp(66,50): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
 F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\MethodHandler.cpp(90,50): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
 F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\MethodHandler.cpp(114,50): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-  main.cpp
   FactorialProcessor.cpp
-  FibonacciProcessor.cpp
-  MultiplierProcessor.cpp
   PowerProcessor.cpp
   utils.cpp
+  main.cpp
   Создание кода...
   mutexborschveskii.vcxproj -> F:\projects\mutexborschveskii\mutexborschveskii\x64\Debug\1lab_borshchevskii.exe

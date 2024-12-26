@@ -7,6 +7,9 @@
 *.o
 *.obj
 
+# Исключение папки Debug внутри x64
+x64/Debug/
+
 # Precompiled Headers
 *.gch
 *.pch
