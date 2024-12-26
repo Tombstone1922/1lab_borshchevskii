@@ -1,0 +1,35 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (mutexborschveskii.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  DataHandler.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\numeric(25,1): warning C4267: =: преобразование из "size_t" в "_Ty"; возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\numeric(41): message : выполняется компиляция ссылки на экземпляр шаблон функции "_Ty std::accumulate<_InIt,_Ty,std::plus<void>>(const _InIt,const _InIt,_Ty,_Fn)"
+          with
+          [
+              _Ty=int,
+              _InIt=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<size_t>>>,
+              _Fn=std::plus<void>
+          ]
+F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Core\DataHandler.cpp(62): message : выполняется компиляция ссылки на экземпляр шаблон функции "_Ty std::accumulate<std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<unsigned __int64>>>,int>(const _InIt,const _InIt,_Ty)"
+          with
+          [
+              _Ty=int,
+              _InIt=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<size_t>>>
+          ]
+  NumberGenerator.cpp
+  MethodHandler.cpp
+F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\MethodHandler.cpp(18,50): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\MethodHandler.cpp(42,50): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\MethodHandler.cpp(66,50): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\MethodHandler.cpp(90,50): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+F:\projects\mutexborschveskii\mutexborschveskii\mutexborschveskii\Handlers\MethodHandler.cpp(114,50): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+  main.cpp
+  FactorialProcessor.cpp
+  FibonacciProcessor.cpp
+  MultiplierProcessor.cpp
+  PowerProcessor.cpp
+  utils.cpp
+  Создание кода...
+  mutexborschveskii.vcxproj -> F:\projects\mutexborschveskii\mutexborschveskii\x64\Debug\1lab_borshchevskii.exe
