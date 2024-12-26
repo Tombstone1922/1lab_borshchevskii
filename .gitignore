@@ -10,6 +10,3 @@
 
 # Игнорируем папку Debug
 x64/Debug/
-
-# Игнорируем папку .vs (Visual Studio)
-.vs/
