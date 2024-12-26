@@ -1,35 +1,12 @@
-# Prerequisites
-*.d
+# Игнорируем архивы
+*.zip
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
+# Игнорируем временные файлы Visual Studio
 *.obj
+*.log
+*.tlog
+*.pdb
+*.ilk
 
-# Исключение папки Debug внутри x64
+# Игнорируем папку Debug
 x64/Debug/
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
